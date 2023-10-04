@@ -75,14 +75,23 @@ button {
 
 .left {
   display: flex;
+  height: 500px;
+  width: 500px;
   align-items: center;
   justify-content: center;
   position: relative;
+  background-color: red;
 }
 
 .img {
- 
-  object-fit: cover;
+  height: 500px;
+  width: 500px;
+  
+}
+
+.canva {
+  height: 500px;
+  width: 500px;
 }
 
 .right {
@@ -117,4 +126,64 @@ button {
 
 .name {
   font-weight: bold;
+}
+
+/* Estilos para tablets (768px de largura ou menos) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0px 20px;
+    font-size: 16px;
+  }
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .rightInput {
+    padding: 10px;
+  }
+}
+
+/* Estilos para dispositivos móveis (576px de largura ou menos) */
+@media screen and (max-width: 576px) {
+  .navbar {
+    padding: 0px 10px;
+    font-size: 14px;
+  }
+
+  .newPostCard {
+    padding: 10px;
+  }
+
+  .addPost {
+    flex-direction: column;
+  }
+
+  .postForm {
+    width: 100%;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .postInput {
+    height: 20px;
+  }
+
+  .container {
+    height: auto;
+  }
+
+  .right {
+    text-align: center;
+  }
 }
