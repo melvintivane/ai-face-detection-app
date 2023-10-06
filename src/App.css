@@ -2,46 +2,75 @@
   display: flex;
 }
 
-canvas {
-  position: absolute;
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .navbar {
-  height: 50px;
+  height: 60px;
+  width: 1024px;
   background-color: #4064ac;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   color: white;
   font-weight: bold;
   padding: 0px 100px;
   font-size: 20px;
 }
 
-.newPostCard {
-  height: 100vh;
+.nav {
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 50px;
+  cursor: pointer;
+  font-weight: normal;
 }
 
-.addPost {
+.wrapper {
+  height: calc(100vh - 70px);
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
 }
 
+canvas {
+  position: absolute;
+}
+
+.newPostCard,
+.addPost,
 label {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.newPostCard {
+  height: calc(98vh - 50px);
+}
+
+
 .addImg {
-  width: 25px;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  fill: #4064ac; /* Cor do ícone */
   cursor: pointer;
 }
 
-.postForm {
+.inputForm {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .avatar {
@@ -66,32 +95,22 @@ button {
   margin-bottom: 10px;
 }
 
-.container {
-  height: calc(100vh - 50px);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
 .left {
   display: flex;
-  height: 500px;
+  height: 600px;
   width: 500px;
   align-items: center;
   justify-content: center;
   position: relative;
-  background-color: red;
+  border-radius: 0px;
+  overflow: hidden;
 }
 
-.img {
-  height: 500px;
-  width: 500px;
-  
-}
-
+.img,
 .canva {
-  height: 500px;
+  height: 600px;
   width: 500px;
+  object-fit: cover;
 }
 
 .right {
@@ -112,20 +131,34 @@ button {
   font-weight: bold;
 }
 
-.friendInput {
-  position: absolute;
-  padding: 10px;
-  font-weight: bold;
-  border: none;
+/* SKELETON */
+.skeleton-km971twiw4p:empty {
+  background-color: #e1e1e1;
+  border-radius: 0px 0px 0px 0px;
+  background-image: linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.5) 50%,
+      rgba(255, 255, 255, 0) 80%
+    ),
+    linear-gradient(#e0e0e0 20px, transparent 0),
+    radial-gradient(
+      circle 17.5px at 17.5px 17.5px,
+      #e0e0e0 16.5px,
+      transparent 17.5px
+    ),
+    linear-gradient(#e0e0e0 200px, transparent 0);
+  background-repeat: repeat-y;
+  background-size: 50px 600px, 300px 600px, 35px 600px, 360px 600px;
+  background-position: -20% 0, left 70px top 244px, left 20px top 236px,
+    left 20px top 20px;
+  animation: shineForSkeleton-km971twiw4p 2s infinite;
 }
-
-.friends {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.name {
-  font-weight: bold;
+@keyframes shineForSkeleton-km971twiw4p {
+  to {
+    background-position: 120% 0, left 70px top 244px, left 20px top 236px,
+      left 20px top 20px;
+  }
 }
 
 /* Estilos para tablets (768px de largura ou menos) */
@@ -147,6 +180,10 @@ button {
 
   .rightInput {
     padding: 10px;
+  }
+
+  .newPostCard {
+    height: auto;
   }
 }
 
