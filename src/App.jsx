@@ -23,43 +23,18 @@ function App() {
     file && getImage();
   }, [file]);
 
-  console.log(image);
   return (
-    <div>
+    <div className="container">
       <Navbar />
       {image ? (
         <NewPost image={image} />
       ) : (
         <div className="newPostCard">
           <div className="addPost">
-            <img
-              src="https://images.pexels.com/photos/1321909/pexels-photo-1321909.jpeg?auto=compress&cs=tinysrgb&w=600"
-              alt=""
-              className="avatar"
-            />
             <div className="inputForm">
-              <input
-                type="text"
-                placeholder="What's on your mind?"
-                className="postInput"
-              />
+              <h2 className="postInput">Choose a photo</h2>
               <label htmlFor="file">
-                <img
-                  className="addImg"
-                  src="https://cdn.icon-icons.com/icons2/564/PNG/512/Add_Image_icon-icons.com_54218.png"
-                  alt=""
-                />
-                <img
-                  className="addImg"
-                  src="https://icon-library.com/images/maps-icon-png/maps-icon-png-5.jpg"
-                  alt=""
-                />
-                <img
-                  className="addImg"
-                  src="https://d29fhpw069ctt2.cloudfront.net/icon/image/84451/preview.svg"
-                  alt=""
-                />
-                <button>Send</button>
+                <svg className="addImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
               </label>
               <input
                 onChange={(e) => setFile(e.target.files[0])}
