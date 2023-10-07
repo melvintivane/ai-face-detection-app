@@ -84,10 +84,10 @@ const NewPost = ({ image }) => {
       )}
       <div className="right">
         {count == 0 ? (
-          <h1>Loading...</h1>
+          <h1>Scanning...</h1>
         ) : (
           <h1>
-            {count} {count > 1 ? "Faces" : "Face"} <br/>Detected
+            {count} {count > 1 ? "Faces" : "Face"} <br/>Detected!
           </h1>
         )}
         <input
