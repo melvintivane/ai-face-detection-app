@@ -3,7 +3,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div className="navbar">
-      <span>MelloSocieté</span>
+      <span>AI Face Anyliser</span>
 
       <div className="right-nav">
         <span>Home</span>
