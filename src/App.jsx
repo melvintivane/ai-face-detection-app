@@ -32,9 +32,9 @@ function App() {
         <div className="newPostCard">
           <div className="addPost">
             <div className="inputForm">
-              <h2 className="postInput">Choose a photo</h2>
+              <h1 className="postInput">Choose a photo</h1>
               <label htmlFor="file">
-                <svg className="addImg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
+                <svg className="button add" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"/></svg>
               </label>
               <input
                 onChange={(e) => setFile(e.target.files[0])}
